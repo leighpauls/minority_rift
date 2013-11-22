@@ -5,6 +5,7 @@ public class RCamera : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Application.runInBackground = true;
 		
 		WebCamTexture cam = new WebCamTexture ();
 

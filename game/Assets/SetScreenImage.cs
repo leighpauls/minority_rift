@@ -16,6 +16,8 @@ public class SetScreenImage : MonoBehaviour {
 				break;
 			}
 		}
+		cam.mipMapBias = -0.5f;
+		// renderer.material.mainTexture = cam;
 		renderer.material.mainTexture = cam;
 		cam.Play();
 		
