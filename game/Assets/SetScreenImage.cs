@@ -3,6 +3,24 @@ using System.Collections;
 
 public class SetScreenImage : MonoBehaviour {
 	
+	// Use this for initialization
+	void Start () {
+		
+		WebCamTexture cam = new WebCamTexture ();
+
+		WebCamDevice[] devices = WebCamTexture.devices;
+		for (int i = 0; i< devices.Length; i++) {
+			Debug.Log(devices[i].name);
+			if (devices[i].name.Contains("CamTwist")) {
+				cam.deviceName = devices[i].name;
+				break;
+			}
+		}
+		renderer.material.mainTexture = cam;
+		cam.Play();
+		
+	}
+	/*
 	Texture2D mTexture;
 	Color32[] mTextureBuffer;
 	// Use this for initialization
@@ -28,5 +46,5 @@ public class SetScreenImage : MonoBehaviour {
 		renderer.material.mainTexture = mTexture;
 		
 		mTexture.Apply();
-	}
+	}*/
 }
