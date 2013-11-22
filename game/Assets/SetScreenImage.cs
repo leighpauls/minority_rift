@@ -14,6 +14,7 @@ public class SetScreenImage : MonoBehaviour {
 		for (int i = 0; i< devices.Length; i++) {
 			Debug.Log(devices[i].name);
 			if (devices[i].name.Contains("CamTwist")) {
+				//Debug.Log (devices[i].name);
 				cam.deviceName = devices[i].name;
 				break;
 			}
