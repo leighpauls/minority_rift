@@ -5,6 +5,8 @@ public class SetScreenImage : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+
+
 		
 		WebCamTexture cam = new WebCamTexture ();
 
